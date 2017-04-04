@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>房屋详情</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--logo和nav-->
+<div class="container">
+    <div class="row logoNav">
+        <!--logo-->
+        <div class="col-xs-6 col-sm-6 col-md-3">
+            <img class="logo img-responsive" src="images/logo.png">
+        </div>
+        <!--导航-->
+        <div class="col-xs-6 col-sm-6 col-md-9">
+            <ul class="styleNav visible-md-block visible-lg-block">
+                <li class="active">首页</li>
+                <li><a href="#">创公寓</a></li>
+                <li><a href="#">我要租房</a></li>
+                <li><a href="#">租前需知</a></li>
+                <li><a href="#">房东加盟</a></li>
+                <li><a href="#">联系我们</a></li>
+                <div class="loginbar"><span>网上交房租</span><a>登录</a>|<a>注册</a></div>
+            </ul>
+            <div class="visible-xs-block visible-sm-block" style="text-align: right"><a class="navIcon"><img src="images/navListIcon.png" width="28"></a></div>
+        </div>
+    </div>
+</div>
+<!--手机端导航-->
+<div class="m_nav visible-xs-block visible-sm-block" data-state="0">
+    <ul>
+        <li><a href="#/1">首页</a></li>
+        <li><a href="#/2">创公寓</a></li>
+        <li><a href="#/3">我要租房</a></li>
+        <li><a href="#/4">租前需知</a></li>
+        <li><a href="#/5">房东加盟</a></li>
+        <li><a href="#/6">联系我们</a></li>
+        <li class="m_loginnav"><a href="#/7">登录</a></li>
+        <li class="m_loginnav"><a href="#/8">注册</a></li>
+    </ul>
+</div>
+<!--内容部分-->
+<div class="container-fluid">
+    <div class="row jmmain">
+        <div class="container clearfix">
+            <p class="title">我现在的位置：网站首页 > 我要看房</p>
+            <div class="row">
+                <div class="goodsPic">
+                    <div class="goodsBigPic" id="BicPic1" style="background: url('images/goodimg.jpg') no-repeat center;background-size: 100% auto;"></div>
+                    <div class="piclistbox piclistbox1">
+                        <span class="ctrlprev prev"><img src="images/piclistleft.png"></span>
+                        <div class="piclist">
+                            <ul>
+                                <li class="active" onclick="showPic(this,'BicPic1',1)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic1',1)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic1',1)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic1',1)"><img src="images/banner2.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic1',1)"><img src="images/goodimg.jpg" width="100%"></li>
+                            </ul>
+                        </div>
+                        <span class="ctrlnext next"><img src="images/piclistright.png"></span>
+                    </div>
+                </div>
+                <div class="goodsattr">
+                    <h1>【金牛区-茶店子】西西里二期 精装合租 茶店子地铁口附近</h1>
+                    <ul>
+                        <li><label>编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label><span>NO.CDZ02364201</span></li>
+                        <li><label>租&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金：</label>￥<span class="amount">800-900</span>元/月<img class="payment" src="images/pays.png"></li>
+                        <li><label>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</label><a>金牛区</a>-<a>茶店子</a>-<a>西西里二期</a><span class="addr">金牛区茶店子西口育仁北路128号</span></li>
+                        <li><label>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</label>合租11/22楼</li>
+                        <li><label>房&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：</label>
+                            <span class="sel active">A房间 带飘窗800元</span>
+                            <span class="sel">B房间已租出</span>
+                            <span class="sel">C房间已租出</span>
+                            <span class="sel">D房间已租出</span>
+                        </li>
+                        <li class="telbox"><label>电话咨询：</label><span class="tellphone">400-400-4170</span></li>
+                    </ul>
+                    <div><button class="checkingbtn">我要看房</button></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="jminfobox"><span>房间基本情况</span></div>
+                <div style="width: 100%;">
+                    <table style="width: 100%;" class="table jminfotable jminfotable1">
+                        <thead>
+                        <tr><td colspan="10"><span>这套房子都有啥？</span></td></tr>
+                        </thead>
+                        <tbody>
+                        <tr><th></th><th>室友</th><th>面积</th><th>飘窗</th><th>阳台</th><th>独卫</th><th>2人</th><th>空调</th><th>价格</th><th width="20%">最早入住日</th></tr>
+                        <tr>
+                            <td>A房间</td>
+                            <td><img src="images/male.png" width="30"></td>
+                            <td>15.00m&sup2;</td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td>￥900</td>
+                            <td>立即入住</td>
+                        </tr>
+                        <tr>
+                            <td>B房间</td>
+                            <td><img src="images/male.png" width="30"></td>
+                            <td>15.00m&sup2;</td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td>￥900</td>
+                            <td>已出租</td>
+                        </tr>
+                        <tr>
+                            <td>C房间</td>
+                            <td><img src="images/male.png" width="30"></td>
+                            <td>15.00m&sup2;</td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td>￥900</td>
+                            <td>已出租</td>
+                        </tr>
+                        <tr>
+                            <td>D房间</td>
+                            <td><img src="images/male.png" width="30"></td>
+                            <td>15.00m&sup2;</td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="images/duigou_03.png" width="20"></td>
+                            <td></td>
+                            <td>￥900</td>
+                            <td>已出租</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left haveitems" colspan="10">每个房间都有这些<span>床</span><span>书桌</span><span>衣柜</span><span>鞋架</span><span>折叠椅</span><span>台灯</span><span>穿衣镜</span><span>挂钩</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left" colspan="10"><b>每个公共区域有这些</b> 无线WIFI公共储物区 餐桌 餐椅 冰箱 洗衣机 热水器 微波炉 浴霸 公用厨房 扫帚 拖把</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="table jminfotable jminfotable2">
+                        <thead>
+                            <tr><td colspan="10"><span>这套房子都有啥？</span></td></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th></th><th>A房间</th><th>B房间</th><th>C房间</th><th>D房间</th></tr>
+                            <tr>
+                                <td>室友</td>
+                                <td><img src="images/male.png" width="30"></td>
+                                <td><img src="images/male.png" width="30"></td>
+                                <td><img src="images/male.png" width="30"></td>
+                                <td><img src="images/male.png" width="30"></td>
+                            </tr>
+                            <tr>
+                                <td>面积</td>
+                                <td>15m&sup2;</td>
+                                <td>15m&sup2;</td>
+                                <td>15m&sup2;</td>
+                                <td>15m&sup2;</td>
+                            </tr>
+                            <tr>
+                                <td>飘窗</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td>阳台</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td>独卫</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td>2人</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td>空调</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td>价格</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td>最早入住日</td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                                <td><img src="images/duigou_03.png" width="20"></td>
+                            </tr>
+                            <tr>
+                                <td class="haveitems" colspan="5">每个房间都有这些</br><span>床</span><span>书桌</span><span>衣柜</span><span>鞋架</span><span>折叠椅</span><span>台灯</span><span>穿衣镜</span><span>挂钩</span></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left" colspan="5"><b>每个公共区域有这些</b> 无线WIFI公共储物区 餐桌 餐椅 冰箱 洗衣机 热水器 微波炉 浴霸 公用厨房 扫帚 拖把</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="jminfobox"><span>房间详情</span></div>
+                <div class="imginfoBox">
+                    <div class="goodsBigPic goodsBigPic1">
+                        <div class="iconimg"><p>A房间</p></div>
+                        <img id="BicPic2" src="images/goodimg.jpg" width="100%">
+                    </div>
+                    <div class="piclistbox piclistbox2">
+                        <span class="ctrlprev prev"><img src="images/piclistleft.png"></span>
+                        <div class="piclist piclist1">
+                            <ul>
+                                <li class="active" onclick="showPic(this,'BicPic2',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic2',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic2',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic2',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic2',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                            </ul>
+                        </div>
+                        <span class="ctrlnext next"><img src="images/piclistright.png"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="jminfobox"><span>房间详情</span></div>
+                <div class="imginfoBox">
+                    <div class="goodsBigPic goodsBigPic1">
+                        <div class="iconimg"><p>B房间</p></div>
+                        <img id="BicPic3" src="images/goodimg.jpg" width="100%">
+                    </div>
+                    <div class="piclistbox piclistbox3">
+                        <span class="ctrlprev prev"><img src="images/piclistleft.png"></span>
+                        <div class="piclist piclist1">
+                            <ul>
+                                <li class="active" onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                                <li onclick="showPic(this,'BicPic3',2)"><img src="images/goodimg.jpg" width="100%"></li>
+                            </ul>
+                        </div>
+                        <span class="ctrlnext next"><img src="images/piclistright.png"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="jminfobox"><span>房间详情</span></div>
+                <p>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                    SM广场 万象城 成年场</br>
+                </p>
+            </div>
+            <div class="row">
+                <h2 class="youliketitle">猜您喜欢</h2>
+                <div class="row youlike">
+                    <div class="col-xs-6 col-sm-4 col-md-4">
+                        <img src="images/goodimg.jpg" width="100%">
+                        <div class="youlikeinfobox">
+                            <div class="text">[锦江区]翡翠城5期<span class="price fr">￥800 - 1200</span></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4">
+                        <img src="images/goodimg.jpg" width="100%">
+                        <div class="youlikeinfobox">
+                            <div class="text">[锦江区]翡翠城5期<span class="price fr">￥800 - 1200</span></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4">
+                        <img src="images/goodimg.jpg" width="100%">
+                        <div class="youlikeinfobox">
+                            <div class="text">[锦江区]翡翠城5期<span class="price fr">￥800 - 1200</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--右边飘浮工具-->
+<div class="us_bar visible-md-block visible-lg-block">
+    <div class="tel"></div>
+    <div class="qq"></div>
+    <div class="code"></div>
+    <div class="an"></div>
+</div>
+<!--底部-->
+<div class="container-fluid footer">
+    <div class="row">
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <div class="row">
+                    <img class="footerLogo img-responsive" src="images/footerLogo.png">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-6">
+                <div class="row">
+                    <ul class="lxfs">
+                        <li>成都市创客家互联科技有限公司  版权所有  2015-2020  蜀ICP备：0765654号</li>
+                        <li>地址：成都市东较场路118号</li>
+                        <li>电话：028-84191853-8003    E-MAIL:yisuyou@163.com</li>
+                        <li>合作机构：百度  腾讯  阿里巴巴  中国电子商务协会</li>
+                        <li>技术支持：成都易速优网络科技有限公司</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ewm col-xs-12 col-sm-4 col-md-3">
+                <img src="images/ewm.png">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    new SwitchBigPic(".piclistbox1").init(); //调用banner功能。参数：banner框，是否有左右控制，是否有下面状态（小点）;
+    new SwitchBigPic(".piclistbox2").init(); //调用banner功能。参数：banner框，是否有左右控制，是否有下面状态（小点）;
+    new SwitchBigPic(".piclistbox3").init(); //调用banner功能。参数：banner框，是否有左右控制，是否有下面状态（小点）;
+</script>
+</body>
+</html>
